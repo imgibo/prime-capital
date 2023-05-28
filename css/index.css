@@ -1,0 +1,126 @@
+.dashboard {
+    position: relative;
+    background-color: var(--color-whitesmoke);
+    width: 100%;
+    height: 990px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-xl);
+    color: var(--color-gray-100);
+    font-family: var(--font-poppins);
+}
+
+.nav {
+    top: 0;
+    width: 280px;
+    height: 900px;
+    color: var(--color-white);
+}
+
+.menu-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 var(--br-5xs) var(--br-5xs) 0;
+    background-color: var(--color-gray-100);
+    width: 280px;
+    height: 900px;
+}
+
+.profile-image {
+    position: absolute;
+    top: 64px;
+    left: 50px;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.user-name {
+    position: absolute;
+    top: 256px;
+    left: 42px;
+    font-size: var(--font-size-5xl);
+    line-height: 36px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.userMembershipDate {
+    position: absolute;
+    top: 292px;
+    left: 30px;
+    font-size: var(--font-size-base);
+    line-height: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 220px;
+}
+
+.dateStartedTxtContainer {
+    line-break: anywhere;
+    width: 100%;
+}
+
+.memberSince {
+    margin: 0;
+}
+
+.memberStatus {
+    position: absolute;
+    top: 336px;
+    left: 81px;
+    width: 119px;
+    height: 36px;
+    font-size: var(--font-size-sm);
+    color: var(--color-seashell);
+}
+
+.memberStatusChild {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    border-radius: 30px;
+    background-color: #d57934;
+    width: 119px;
+    height: 26px;
+}
+
+.activeMember {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    line-height: 36px;
+    text-transform: lowercase;
+    font-weight: 300;
+}
+
+.navButtonContainer {
+    position: absolute;
+    width: fit-content;
+    margin: 400px auto;
+}
+
+.btn {
+    width: 200px;
+    height: 20px;
+    color: var(--color-seashell);
+    background-color: var(--color-gray-100);
+    text-decoration: none;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+
+}
+
+.btn i {
+    margin-right: 20px;
+}
+
+.btn:hover {
+    color: var(--color-gray-100);
+    background-color: var(--color-seashell);
+}
+
