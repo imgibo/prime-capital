@@ -176,3 +176,28 @@
     font-weight: 500;
 }
 
+.cardTypeSavings {
+    top: 196px;
+    left: 344px;
+    color: var(--color-whitesmoke);
+}
+
+.cardBox,
+.cardTypeSavings {
+    position: absolute;
+    width: 504px;
+    height: 280px;
+}
+
+.accountType {
+    top: 22px;
+    font-size: var(--font-size-5xl);
+}
+
+.amount,
+.accountType {
+    position: absolute;
+    left: 25px;
+    line-height: 36px;
+    text-transform: capitalize;
+}
