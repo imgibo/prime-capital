@@ -226,18 +226,50 @@
     color: #4DDB77;;
 }
 
-.cardButton {
-
+.cardButtonContainer {
+    position: absolute;
+    width: fit-content;
+    margin: 220px auto;
 }
 
-.btn.cashIn {
-    top: 0;
-    left: 9.23px;
-    line-height: 36px;
-    text-transform: capitalize;
-    width: 164.55px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.cardBtn {
+    width: fit-content;
+    height: 72px;
+    left: 25px;
+    top: 181px;
+    border-radius: var(--br-5xs);
+    color: var(--color-seashell);
+    background-color: var(--color-gray-100);
+    text-decoration: none;
+    margin: 20px;
+    padding: 20px
+}
+
+.cardBtn i {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.cardBtn.cashIn,
+.cardBtn.transfer {
+    width: 250;
+    height: 47px;
+    border-radius: var(--br-5xs);
+    color: var(--color-seashell);
+    background-color: var(--color-gray-100);
+    text-decoration: none;
+    margin: 20px;
+    padding-left: var(--padding-6xs);
+}
+
+.cardBtn.cashIn:hover,
+.cardBtn.transfer:hover {
+    width: 250px;
+    height: 47px;
+    border-radius: var(--br-5xs);
+    color: var(--color-gray-100);
+    background-color: var(--color-seashell);
+    text-decoration: none;
+    margin: 20px;
+    padding-left: var(--padding-6xs);
 }
