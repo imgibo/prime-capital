@@ -1,2 +1,0 @@
-# prime-capital.github.io
- 
