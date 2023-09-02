@@ -2,18 +2,16 @@
     position: relative;
     background-color: var(--color-whitesmoke);
     width: 100%;
-    height: 900px;
+    height: 100%;
     overflow: hidden;
-    text-align: left;
-    font-size: var(--font-size-xl);
-    color: var(--color-gray-100);
+    color: var(--color-primary);
     font-family: var(--font-poppins);
 }
 
 .nav {
     top: 0;
     width: 280px;
-    height: 900px;
+    height: 800px;
     color: var(--color-white);
 }
 
@@ -22,26 +20,26 @@
     top: 0;
     left: 0;
     border-radius: 0 var(--br-5xs) var(--br-5xs) 0;
-    background-color: var(--color-gray-100);
+    background-color: var(--color-primary);
     width: 280px;
-    height: 900px;
+    height: 100%;
 }
 
 .profile-image {
     position: absolute;
-    top: 64px;
-    left: 50px;
+    top: 120px;
+    left: 20px;
     border-radius: 50%;
-    width: 180px;
-    height: 180px;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
 }
 
 .user-name {
     position: absolute;
-    top: 256px;
-    left: 42px;
-    font-size: var(--font-size-5xl);
+    top: 118px;
+    left: 80px;
+    font-size: var(--font-size-base);
     line-height: 36px;
     text-transform: uppercase;
     font-weight: 500;
@@ -49,50 +47,48 @@
 
 .userMembershipDate {
     position: absolute;
-    top: 292px;
-    left: 30px;
-    font-size: var(--font-size-base);
-    line-height: 20px;
+    top: 220px;
+    font-size: var(--font-size-sm);
+    line-height: 10px;
     text-align: center;
-    display: flex;
-    align-items: center;
-    width: 220px;
+    width: 280px;
+    border: 1px solid var(--color-seashell);
+    border-left: none;
+    border-right: none;
 }
 
 .dateStartedTxtContainer {
     line-break: anywhere;
     width: 100%;
-}
-
-.memberSince {
-    margin: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 .memberStatus {
     position: absolute;
-    top: 336px;
-    left: 81px;
-    width: 119px;
+    top: 150px;
+    left: 80px;
+    width: 90px;
     height: 36px;
-    font-size: var(--font-size-sm);
     color: var(--color-seashell);
 }
 
 .memberStatusChild {
     position: absolute;
-    top: 5px;
+    top: 0;
     left: 0;
     border-radius: 30px;
-    background-color: #d57934;
-    width: 119px;
-    height: 26px;
+    background-color: var(--color-secondary);
+    width: 90px;
+    height: 15px;
 }
 
 .activeMember {
+    font-size: 10px;
     position: absolute;
+    align-items: center;
     top: 0;
     left: 6px;
-    line-height: 36px;
     text-transform: lowercase;
     font-weight: 300;
 }
@@ -100,72 +96,69 @@
 .navButtonContainer {
     position: absolute;
     width: fit-content;
-    margin: 400px auto;
+    top: 300px;
+    font-size: var(--font-size-sm);
+    font-weight: 400;
 }
 
 .btn {
-    width: 220px;
-    height: 47px;
+    width: 260px;
+    height: 37px;
     border-radius: var(--br-5xs);
     color: var(--color-seashell);
-    background-color: var(--color-gray-100);
     text-decoration: none;
-    margin: 20px;
-    padding-left: var(--padding-6xs);
+    margin: 10px;
     display: flex;
     align-items: center;
-
-}
-
-.btn i {
-    margin-right: 20px;
-    margin-left: 20px;
+    transition: .3s;
 }
 
 .btn.dashboard {
-    width: 220px;
-    height: 47px;
-    border-radius: var(--br-5xs);
-    color: var(--color-gray-100);
+    color: var(--color-primary);
     background-color: var(--color-seashell);
-    text-decoration: none;
-    margin: 20px;
-    padding-left: var(--padding-6xs);
-    display: flex;
-    align-items: center;
+}
+
+.btn i {
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .btn:hover {
-    width: 220px;
-    height: 47px;
-    border-radius: var(--br-5xs);
-    color: var(--color-gray-100);
+    color: var(--color-primary);
     background-color: var(--color-seashell);
-    text-decoration: none;
-    margin: 20px;
-    padding-left: var(--padding-6xs);
-    display: flex;
-    align-items: center;
+    margin: 10px;
 }
 
 .logo {
     position: absolute;
-    top: 769px;
+    top: 4px;
+    left: 10px;
     width: 198px;
     height: 91px;
     object-fit: cover;
 }
 
-.companyName,
+.bx.bxs-arrow-from-right {
+    color: var(--color-white);
+    position: relative;
+    align-items: center;
+    top: 35px;
+    left: 90%;
+
+
+}
+
+.pageName,
 .welcomeMessage {
     position: absolute;
     left: 344px;
     line-height: 36px;
 }
 
-.companyName {
-    top: 64px;
-    font-size: 32px;
+.pageName {
+    top: 35px;
+    font-size: var(--font-size-base);
+    font-weight: 400;
     text-transform: uppercase;
 }
 
@@ -173,8 +166,27 @@
     top: 118px;
     font-size: var(--font-size-5xl);
     text-transform: capitalize;
-    font-weight: 500;
+    font-weight: 600;
 }
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: ( 0.0deg) }
+}
+
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
 
 .cardTypeSavings {
     position: absolute;
@@ -182,94 +194,94 @@
     height: 280px;
     top: 196px;
     left: 344px;
-    color: var(--color-whitesmoke);
 }
 
 .cardBox {
     position: absolute;
+    display: flex;
     border-radius: var(--br-5xs);
-    background-color: var(--color-gray-100);
-    width: 504px;
-    height: 280px;
+    background-color: var(--color-tertiary);
+    width: 340px;
+    height: 180px;
 }
 
 .accountType,
 .amount {
     position: absolute;
-    left: 25px;
+    left: 15px;
     line-height: 36px;
     text-transform: capitalize;
 }
 
 .accountType {
-    top: 22px;
-    font-size: var(--font-size-5xl);
+    top: 12px;
+    font-size: var(--font-size-base);
 }
 
 .amount {
-    top: 78px;
-    font-size: 56px;
+    top: 58px;
+    font-size: 36px;
     font-weight: 600;
+    font-family: inter;
 }
 
 .interestAccrued {
     position: absolute;
-    width: 209px;
     height: 36px;
-    left: 25px;
-    top: 130px;
-    font-family: 'Poppins';
+    left: 15px;
+    top: 90px;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 36px;
-    color: #4DDB77;;
+    color: var(--color-secondary);
 }
 
 .cardButtonContainer {
+    width: 330px;
     position: absolute;
-    width: fit-content;
-    margin: 220px auto;
+    top: 75%;
 }
 
-.cardBtn {
+
+.cardButtonContainer a {
     width: fit-content;
-    height: 72px;
-    left: 25px;
-    top: 181px;
+    justify-content: center;
     border-radius: var(--br-5xs);
     color: var(--color-seashell);
-    background-color: var(--color-gray-100);
+    background-color: var(--color-primary);
     text-decoration: none;
+    text-align: center;
     margin: 20px;
-    padding: 20px
+    padding: 10px;
+    font-size: var(--font-size-xs);
 }
 
 .cardBtn i {
-    margin-right: 20px;
-    margin-left: 20px;
-}
-
-.cardBtn.cashIn,
-.cardBtn.transfer {
-    width: 250;
-    height: 47px;
-    border-radius: var(--br-5xs);
-    color: var(--color-seashell);
-    background-color: var(--color-gray-100);
-    text-decoration: none;
-    margin: 20px;
-    padding-left: var(--padding-6xs);
+    margin-right: 10px;
 }
 
 .cardBtn.cashIn:hover,
 .cardBtn.transfer:hover {
-    width: 250px;
-    height: 47px;
-    border-radius: var(--br-5xs);
-    color: var(--color-gray-100);
+    color: var(--color-primary);
     background-color: var(--color-seashell);
-    text-decoration: none;
     margin: 20px;
-    padding-left: var(--padding-6xs);
+    padding-left: 10px;
+}
+
+.cardTypeLoan {
+    position: absolute;
+    width: 504px;
+    height: 280px;
+    top: 196px;
+    left: 744px;
+}
+
+.cardTypeLoan .cardBoxloan {
+    position: absolute;
+    display: flex;
+    border-radius: var(--br-5xs);
+    background-color: var(--color-tertiary);
+    width: 340px;
+    height: 180px;
 }

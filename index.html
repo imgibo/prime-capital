@@ -5,16 +5,17 @@
         <TItle>Prime Capital Investment Group</TItle>
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"/>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
         <div class="dashboard">
             <div class="nav">
                 <div class="menu-frame"></div>
+                <img class="logo" src="image/logo.svg" alt="Company Logo"/>
+                <i class='bx bxs-arrow-from-right'></i>
                 <img class="profile-image" src="image/Profile Picture.png" alt="Profile Image"/>
                 <div class="user-name">Gilbert Burgos</div>
                 <div class="userMembershipDate">
@@ -28,24 +29,37 @@
                     <div class="activeMember">active member</div>
                 </div>
                 <div class="navButtonContainer">                    
-                    <a href="#" class="btn dashboard"><i class="fa-solid fa-house"></i>Dashboard</a>
+                    <a href="#" class="btn dashboard" type="active"><i class="fa-solid fa-house"></i>Dashboard</a>
                     <a href="#" class="btn loan"><i class="fa-solid fa-building-columns"></i>Loan</a>
                     <a href="#" class="btn transactions"><i class="fa-solid fa-clock-rotate-left"></i>Transactions</a>
                 </div>
-                <img class="logo" src="image/logo.png" alt="Company Logo"/>
             </div>
-            <b class="companyName">Prime Capital Investment Group</b>
-            <div class="welcomeMessage">Welcome, Gilbert!</div>
-            <div class="cardTypeSavings">
-                <div class="cardBox"></div>
-                <div class="accountType">Savings Account</div>
-                <div class="amount">₱ 123,456,789.00</div>
-                <div class="interestAccrued">Interest Accrued: ₱1,234.99</div>
-                <div class="cardButtonContainer">                    
-                    <a href="#" class="cardBtn cashIn"><i class="fa-solid fa-house"></i>Cash In</a>
-                    <a href="#" class="cardBtn transfer"><i class="fa-solid fa-building-columns"></i>Transfer</a>
+            <b class="pageName">Dashboard</b>
+            <div class="welcomeMessage">Welcome, Gilbert! <span class="wave">👋</span></div>
+            <section>
+                <div class="cardTypeSavings">
+                    <div class="cardBox">
+                        <div class="accountType">Savings Account</div>
+                        <div class="amount">₱ 123,456,789.00</div>
+                        <div class="interestAccrued">Interest Accrued: ₱1,234.99</div>
+                        <div class="cardButtonContainer">                    
+                            <a href="#" class="cardBtn cashIn"><i class="fa-solid fa-house"></i>Cash In</a>
+                            <a href="#" class="cardBtn transfer"><i class="fa-solid fa-building-columns"></i>Transfer</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="cardTypeLoan">
+                    <div class="cardBoxloan">
+                        <div class="accountType">Loan Account</div>
+                        <div class="amount">₱ 123,456,789.00</div>
+                        <div class="interestAccrued">Interest Accrued: ₱1,234.99</div>
+                        <div class="cardButtonContainer">                    
+                            <a href="#" class="cardBtn cashIn"><i class="fa-solid fa-house"></i>Cash In</a>
+                            <a href="#" class="cardBtn transfer"><i class="fa-solid fa-building-columns"></i>Transfer</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </body>
 </html>
