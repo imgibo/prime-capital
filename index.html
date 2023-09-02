@@ -11,46 +11,39 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-        <div class="dashboard">
+        <div class="sidebar-menu">
             <div class="nav">
                 <div class="menu-frame"></div>
                 <img class="logo" src="image/logo.svg" alt="Company Logo"/>
                 <i class='bx bxs-arrow-from-right'></i>
                 <img class="profile-image" src="image/Profile Picture.png" alt="Profile Image"/>
                 <div class="user-name">Gilbert Burgos</div>
+                <div class="memberStatus">
+                    <div class="ms-container"></div>
+                    <div class="activeMember">active member</div>
+                </div>
                 <div class="userMembershipDate">
                     <span class="dateStartedTxtContainer">
                         <p class="memberSince">Member since:</p>
                         <p class="memberSince">September 01, 2023</p>
                     </span>    
                 </div>
-                <div class="memberStatus">
-                    <div class="memberStatusChild"></div>
-                    <div class="activeMember">active member</div>
-                </div>
                 <div class="navButtonContainer">                    
-                    <a href="#" class="btn dashboard" type="active"><i class="fa-solid fa-house"></i>Dashboard</a>
-                    <a href="#" class="btn loan"><i class="fa-solid fa-building-columns"></i>Loan</a>
-                    <a href="#" class="btn transactions"><i class="fa-solid fa-clock-rotate-left"></i>Transactions</a>
+                    <a href="#" class="btn dashboard" type="active"><i class='bx bxs-home'></i>Dashboard</a>
+                    <a href="#" class="btn portfolio"><i class='bx bx-user-circle'></i>Portfolio</a>
+                    <a href="#" class="btn loan"><i class='bx bxs-bank'></i>Loan</a>
+                    <a href="#" class="btn transactions"><i class='bx bx-time-five'></i>Transactions</a>
+                    <a href="#" class="btn notifications"><i class='bx bxs-bell-ring'></i>Notifications</a>
                 </div>
             </div>
+        </div>
+        <div class="main-content">    
             <b class="pageName">Dashboard</b>
             <div class="welcomeMessage">Welcome, Gilbert! <span class="wave">👋</span></div>
             <section>
                 <div class="cardTypeSavings">
                     <div class="cardBox">
                         <div class="accountType">Savings Account</div>
-                        <div class="amount">₱ 123,456,789.00</div>
-                        <div class="interestAccrued">Interest Accrued: ₱1,234.99</div>
-                        <div class="cardButtonContainer">                    
-                            <a href="#" class="cardBtn cashIn"><i class="fa-solid fa-house"></i>Cash In</a>
-                            <a href="#" class="cardBtn transfer"><i class="fa-solid fa-building-columns"></i>Transfer</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardTypeLoan">
-                    <div class="cardBoxloan">
-                        <div class="accountType">Loan Account</div>
                         <div class="amount">₱ 123,456,789.00</div>
                         <div class="interestAccrued">Interest Accrued: ₱1,234.99</div>
                         <div class="cardButtonContainer">                    

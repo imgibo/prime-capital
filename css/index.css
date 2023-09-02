@@ -1,17 +1,11 @@
-.dashboard {
-    position: relative;
-    background-color: var(--color-whitesmoke);
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+/* sidebar-menu design */
+
+.sidebar-menu {
     color: var(--color-primary);
     font-family: var(--font-poppins);
 }
 
 .nav {
-    top: 0;
-    width: 280px;
-    height: 800px;
     color: var(--color-white);
 }
 
@@ -19,10 +13,27 @@
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 0 var(--br-5xs) var(--br-5xs) 0;
+    border-radius: 0 8px 8px 0;
     background-color: var(--color-primary);
     width: 280px;
     height: 100%;
+}
+
+.logo {
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    width: 198px;
+    height: 91px;
+    object-fit: cover;
+}
+
+.bx.bxs-arrow-from-right {
+    color: var(--color-white);
+    position: relative;
+    align-items: center;
+    top: 40px;
+    left: 16.5%;
 }
 
 .profile-image {
@@ -45,6 +56,31 @@
     font-weight: 500;
 }
 
+.memberStatus {
+    position: absolute;
+    top: 150px;
+    left: 80px;
+    width: 90px;
+    color: var(--color-seashell);
+}
+
+.ms-container {
+    border-radius: 30px;
+    background-color: var(--color-secondary);
+    width: 90px;
+    height: 15px;
+}
+
+.activeMember {
+    font-size: 10px;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    left: 6px;
+    text-transform: lowercase;
+    font-weight: 300;
+}
+
 .userMembershipDate {
     position: absolute;
     top: 220px;
@@ -64,35 +100,6 @@
     align-items: center;
 }
 
-.memberStatus {
-    position: absolute;
-    top: 150px;
-    left: 80px;
-    width: 90px;
-    height: 36px;
-    color: var(--color-seashell);
-}
-
-.memberStatusChild {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 30px;
-    background-color: var(--color-secondary);
-    width: 90px;
-    height: 15px;
-}
-
-.activeMember {
-    font-size: 10px;
-    position: absolute;
-    align-items: center;
-    top: 0;
-    left: 6px;
-    text-transform: lowercase;
-    font-weight: 300;
-}
-
 .navButtonContainer {
     position: absolute;
     width: fit-content;
@@ -102,9 +109,10 @@
 }
 
 .btn {
+    font-size: 16px;
     width: 260px;
     height: 37px;
-    border-radius: var(--br-5xs);
+    border-radius: 8px;
     color: var(--color-seashell);
     text-decoration: none;
     margin: 10px;
@@ -129,29 +137,16 @@
     margin: 10px;
 }
 
-.logo {
-    position: absolute;
-    top: 4px;
-    left: 10px;
-    width: 198px;
-    height: 91px;
-    object-fit: cover;
-}
+/* main-content designs */
 
-.bx.bxs-arrow-from-right {
-    color: var(--color-white);
-    position: relative;
-    align-items: center;
-    top: 35px;
-    left: 90%;
-
-
+.main-content {
+    font-family: var(--font-poppins);
 }
 
 .pageName,
 .welcomeMessage {
     position: absolute;
-    left: 344px;
+    left: 320px;
     line-height: 36px;
 }
 
@@ -186,23 +181,21 @@
     animation-iteration-count: infinite;  /* Never stop waving :) */
     transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
     display: inline-block;
-  }
+}
 
 .cardTypeSavings {
     position: absolute;
-    width: 504px;
-    height: 280px;
     top: 196px;
-    left: 344px;
+    left: 320px;
 }
 
 .cardBox {
-    position: absolute;
     display: flex;
-    border-radius: var(--br-5xs);
-    background-color: var(--color-tertiary);
+    border-radius: 8px;
+    background-color: var(--color-primary);
     width: 340px;
     height: 180px;
+    color: var(--color-seashell);
 }
 
 .accountType,
@@ -210,7 +203,6 @@
     position: absolute;
     left: 15px;
     line-height: 36px;
-    text-transform: capitalize;
 }
 
 .accountType {
@@ -238,50 +230,44 @@
 }
 
 .cardButtonContainer {
-    width: 330px;
     position: absolute;
+    width: max-content;
     top: 75%;
 }
 
 
-.cardButtonContainer a {
-    width: fit-content;
+/* .cardButtonContainer a {
     justify-content: center;
-    border-radius: var(--br-5xs);
+    border-radius: 8px;
     color: var(--color-seashell);
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     text-decoration: none;
     text-align: center;
+    font-size: var(--font-size-xs);
     margin: 20px;
     padding: 10px;
+} */
+
+.cardBtn.cashIn,
+.cardBtn.transfer {
+    background-color: var(--color-secondary);
+    margin-left: 45px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-seashell);
     font-size: var(--font-size-xs);
 }
 
-.cardBtn i {
-    margin-right: 10px;
+/* icon gap */
+.cardBtn i { 
+    margin-right: 10px; 
 }
 
 .cardBtn.cashIn:hover,
 .cardBtn.transfer:hover {
     color: var(--color-primary);
     background-color: var(--color-seashell);
-    margin: 20px;
-    padding-left: 10px;
-}
-
-.cardTypeLoan {
-    position: absolute;
-    width: 504px;
-    height: 280px;
-    top: 196px;
-    left: 744px;
-}
-
-.cardTypeLoan .cardBoxloan {
-    position: absolute;
-    display: flex;
-    border-radius: var(--br-5xs);
-    background-color: var(--color-tertiary);
-    width: 340px;
-    height: 180px;
+    margin-left: 45px;
+    padding: 10px 15px;
 }
