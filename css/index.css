@@ -3,6 +3,8 @@
 .sidebar-menu {
     color: var(--color-primary);
     font-family: var(--font-poppins);
+    background-color: var(--color-whitesmoke);
+    height: 100vh;
 }
 
 .nav {
@@ -61,7 +63,7 @@
     top: 150px;
     left: 80px;
     width: 90px;
-    color: var(--color-seashell);
+    color: var(--color-whitesmoke);
 }
 
 .ms-container {
@@ -88,7 +90,7 @@
     line-height: 10px;
     text-align: center;
     width: 280px;
-    border: 1px solid var(--color-seashell);
+    border: 1px solid var(--color-whitesmoke);
     border-left: none;
     border-right: none;
 }
@@ -113,7 +115,7 @@
     width: 260px;
     height: 37px;
     border-radius: 8px;
-    color: var(--color-seashell);
+    color: var(--color-whitesmoke);
     text-decoration: none;
     margin: 10px;
     display: flex;
@@ -123,7 +125,7 @@
 
 .btn.dashboard {
     color: var(--color-primary);
-    background-color: var(--color-seashell);
+    background-color: var(--color-whitesmoke);
 }
 
 .btn i {
@@ -131,10 +133,32 @@
     margin-left: 10px;
 }
 
+.nav-sideBar-bottom .btn:hover,
 .btn:hover {
     color: var(--color-primary);
-    background-color: var(--color-seashell);
+    background-color: var(--color-whitesmoke);
     margin: 10px;
+}
+
+.nav-sideBar-bottom {
+    position: absolute;
+    width: fit-content;
+    top: 670px;
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+}
+
+.nav-sideBar-bottom .btn {
+    font-size: 16px;
+    width: 260px;
+    height: 37px;
+    border-radius: 8px;
+    color: var(--color-whitesmoke);
+    text-decoration: none;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    transition: .3s;
 }
 
 /* main-content designs */
@@ -160,7 +184,6 @@
 .welcomeMessage {
     top: 118px;
     font-size: var(--font-size-5xl);
-    text-transform: capitalize;
     font-weight: 600;
 }
 
@@ -189,29 +212,47 @@
     left: 320px;
 }
 
-.cardBox {
+.cardTypeSavings img {
+    width: 360px;
+    height: 220px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* .cardBox {
     display: flex;
     border-radius: 8px;
     background-color: var(--color-primary);
     width: 340px;
     height: 180px;
-    color: var(--color-seashell);
-}
+    color: var(--color-whitesmoke);
+} */
 
-.accountType,
+.accountNum,
 .amount {
     position: absolute;
-    left: 15px;
+    left: 25px;
     line-height: 36px;
+    color: var(--color-whitesmoke);
 }
 
-.accountType {
-    top: 12px;
-    font-size: var(--font-size-base);
+.accountNum {
+    top: 65px;
+    font-size: var(--font-size-sm);
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+.cardBox .bx.bxs-copy {
+    position: absolute;
+    color: var(--color-whitesmoke);
+    top: 73px;
+    left: 43%;
+    cursor: pointer;
 }
 
 .amount {
-    top: 58px;
+    top: 105px;
     font-size: 36px;
     font-weight: 600;
     font-family: inter;
@@ -220,54 +261,48 @@
 .interestAccrued {
     position: absolute;
     height: 36px;
-    left: 15px;
-    top: 90px;
+    top: 77%;
+    left: 25px;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    line-height: 36px;
+    line-height: 14px;
     color: var(--color-secondary);
 }
 
 .cardButtonContainer {
+    display: flex;
     position: absolute;
-    width: max-content;
+    width: 340px;
     top: 75%;
+    justify-content: right;
+    align-items: center;
 }
 
-
-/* .cardButtonContainer a {
-    justify-content: center;
-    border-radius: 8px;
-    color: var(--color-seashell);
+.cardBtn.deposit {
     background-color: var(--color-secondary);
-    text-decoration: none;
-    text-align: center;
-    font-size: var(--font-size-xs);
-    margin: 20px;
-    padding: 10px;
-} */
-
-.cardBtn.cashIn,
-.cardBtn.transfer {
-    background-color: var(--color-secondary);
-    margin-left: 45px;
     padding: 10px 15px;
     border-radius: 8px;
     text-decoration: none;
-    color: var(--color-seashell);
+    color: var(--color-whitesmoke);
     font-size: var(--font-size-xs);
 }
 
 /* icon gap */
-.cardBtn i { 
-    margin-right: 10px; 
+.bx.bxs-arrow-to-bottom { 
+    margin-left: 10px;
+    font-size: var(--font-size-sm);
 }
 
-.cardBtn.cashIn:hover,
-.cardBtn.transfer:hover {
+.cardBtn.deposit:hover {
     color: var(--color-primary);
-    background-color: var(--color-seashell);
+    background-color: var(--color-whitesmoke);
     margin-left: 45px;
     padding: 10px 15px;
+}
+
+/* Transaction Section */
+
+.myTransactions-section {
+    position: absolute;
 }
