@@ -1,6 +1,7 @@
 /* sidebar-menu design */
 
 .sidebar-menu {
+    display: block;
     color: var(--color-primary);
     font-family: var(--font-poppins);
     background-color: var(--color-whitesmoke);
