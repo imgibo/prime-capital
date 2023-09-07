@@ -48,6 +48,33 @@ div .greetings {
     display: inline-block;
 }
 
+.line {
+    display: flex;
+    border-left: 1.5px solid var(--color-primary);
+    margin-left: 20px;
+    height: 50px;
+}
+
+.calendar {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary);
+    padding: 0 20px;
+    margin-left: 20px;
+    border-radius: 50px;
+    color: var(--color-whitesmoke);
+
+}
+
+.calendar i {
+    font-size: var(--font-size-base);
+}
+
+.calendar h2 {
+    margin-left: 10px;
+    font-size: var(--font-size-xs);
+}
+
 
 section {
     grid-area: sidebar;
@@ -97,7 +124,7 @@ section {
     color: var(--color-whitesmoke);
     font-size: var(--font-size-sm);
     border-radius: 5px;
-    margin: 8px 0;
+    margin: 3px 0;
     padding: 8px;
 }
 
@@ -169,7 +196,7 @@ section {
     color: var(--color-whitesmoke);
     font-size: var(--font-size-sm);
     border-radius: 5px;
-    margin: 5px 0;
+    margin: 3px 0;
     padding: 8px;
 }
 
