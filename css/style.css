@@ -50,7 +50,7 @@ div .greetings {
 
 .line {
     display: flex;
-    border-left: 1.5px solid var(--color-primary);
+    border-left: 2px solid var(--color-lightgray);
     margin-left: 20px;
     height: 50px;
 }
@@ -73,6 +73,43 @@ div .greetings {
 .calendar h2 {
     margin-left: 10px;
     font-size: var(--font-size-xs);
+}
+
+.topbar-btn {
+    position: absolute;
+    left: 80%;
+    display: inline-flex;
+    width: 270px;
+    justify-content: space-between;
+}
+
+.top-icon {
+    display: flex;
+    width: 50px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size-xl);
+}
+
+.bx.bx-chat:hover,
+.bx.bxs-bell-ring:hover {
+    color: var(--color-secondary);
+}
+
+.top-userAccnt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: var(--font-size-sm);
+}
+
+.top-userAccnt img {
+    width: 30px;
+}
+
+.bx.bx-caret-down {
+   cursor: pointer;
 }
 
 
@@ -203,7 +240,7 @@ section {
 
 
 main {
-    border-top: 1px solid gray;
+    /* border-top: 1px solid gray; */
     grid-area: main;
     padding: 20px;
     background-color: var(--color-whitesmoke);
@@ -222,19 +259,57 @@ main {
 }
 
 .container {
-    background-color: var(--color-lightgray);
-    border: 1px solid gray;
+    background-color: var(--color-white);
+    /* border: 1px solid gray; */
     border-radius: 8px;
 }
 
 .container:nth-child(1) {
     grid-area: col1;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-whitesmoke);
+}
+
+.container:nth-child(1) h2 {
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+    padding: 15px;
+    margin: 0;
 }
 
 .container:nth-child(2) {
     grid-area: col2;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    background-color: var(--color-whitesmoke);
+
 }
 
+.swiper {
+    display: flex;
+    width: 440px;
+    height: 200px;
+    margin: 0;
+    border-radius: 8px;
+}
+
+.swiper-slide img {
+    width: -webkit-fill-available;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: var(--color-whitesmoke) !important;
+    font-size: 22px !important;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    font-size: 22px !important;
+}
+
+/* card layout */
 .container:nth-child(3) {
     grid-area: col3;
     overflow: hidden;
@@ -244,6 +319,7 @@ main {
 .container:nth-child(3) img {
     position: relative;
     width: 360px;
+    border-radius: 8px;
 }
 
 .card-details div,
@@ -275,10 +351,14 @@ main {
     font-size: var(--font-size-xs);
 }
 
+.card-details .interestAccrued span {
+    color: green !important;
+}
+
 .cardBtn-container {
     display: flex;
     position: absolute;
-    width: 300px;
+    width: 320px;
     top: 75%;
     justify-content: right;
     align-items: center;
@@ -300,9 +380,43 @@ main {
     font-size: var(--font-size-sm);
 }
 
+/* upcoming payment layout */
 .container:nth-child(4) {
     grid-area: col4;
+    /* display: flex;
+    flex-direction: column; */
 }
+
+.container:nth-child(4) h2 {
+    margin: 0;
+    padding: 15px;
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+}
+
+.container:nth-child(4) i {
+    color: var(--color-lightgray);
+    font-size: var(--font-size-5xl);
+    margin-right: 10px;
+}
+
+.paymentDue, .pendingItems {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 15px;
+    font-size: var(--font-size-xs);
+    color: var(--color-lightgray);
+}
+
+/* .paymentDue .pay, .pendingItems .approve {
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--color-lightgray);
+    padding: 5px 10px;
+    border-radius: 8px;
+    justify-self: right !important;
+} */
 
 .container:nth-child(5) {
     grid-area: col5;

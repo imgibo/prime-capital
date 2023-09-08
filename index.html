@@ -10,6 +10,7 @@
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <!-- <a href="https://storyset.com/people">People illustrations by Storyset</a> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     </head>
     <body>
         <header class="topbar">
@@ -25,6 +26,17 @@
                 <i class='bx bx-calendar-check'></i>
                 <h2 class="date">01 May</h2>
             </div>
+            <div class="topbar-btn">
+                <div class="top-icon">
+                    <i class='bx bx-chat'></i>
+                    <i class='bx bxs-bell-ring'></i>
+                </div>
+                <div class="top-userAccnt">
+                    <i class='bx bx-caret-down'></i>
+                    <p class="userName">Gilbert Burgos</p>
+                    <img src="image/Profile Picture.png" alt="Profile picture">
+                </div>
+            </div>
         </header>
         <section class="sidebar">
             <div class="logo-container">
@@ -36,7 +48,7 @@
                 <a href="#" class="btn portfolio"><i class='bx bx-user-circle'></i>Portfolio</a>
                 <a href="#" class="btn loan"><i class='bx bxs-bank'></i>Loan</a>
                 <a href="#" class="btn transactions"><i class='bx bx-time-five'></i>Transactions</a>
-                <a href="#" class="btn notifications"><i class='bx bxs-bell-ring'></i>Notifications</a>
+                <a href="#" class="btn notifications"><i class='bx bx-shopping-bag'></i>Shop</a>
             </div>
             <div class="upsell-container">
                 <h1>Upgrade to Pro 🔥</h1>
@@ -49,23 +61,68 @@
             </div>
         </section>
         <main class="main">
-            <div class="container"></div>
-            <div class="container"></div>
+            <div class="container">
+                <h2 class="pageTitle">Dashboard</h2>
+            </div>
+            <div class="container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/special-announcement-flyer-design-template-53f58f11782ec4dd80a7c7dd05d7ac5c_screen.jpg?ts=1600099310" alt=""></div>
+                      <div class="swiper-slide"><img src="https://i.ytimg.com/vi/OZJPQ2dRt-8/maxresdefault.jpg" alt=""></div>
+                      <div class="swiper-slide"><img src="https://martinupnorthblog.files.wordpress.com/2023/04/launch_image_laying-rectangle_uk_v4_final.jpg?w=1024" alt=""></div>
+                    </div>
+
+                    <!-- pagination -->
+                    <div class="swiper-pagination"></div>
+                  
+                    <!-- navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
             <div class="container">
                 <img src="image/card-background.svg" alt="savings card">
                 <div class="card-details">
                     <div class="accountNum">123-456-7890</div>
                     <i class='bx bxs-copy'></i>
                     <div class="amount">₱ 1,234,567.89</div>
-                    <div class="interestAccrued">Interest Accrued: <br>₱1,234.99</div>
+                    <div class="interestAccrued">Interest Accrued: <br><span>₱1,234.99</span></div>
                     <div class="cardBtn-container">
                         <a href="#" class="cardBtn deposit">Deposit<i class='bx bxs-arrow-to-bottom'></i></a>
                     </div>
                 </div>
             </div>
-            <div class="container"></div>
+            <div class="container">
+                <h2>Upcoming payments</h2>
+                <div class="paymentDue">
+                    <i class='bx bx-time-five'></i>
+                    <p>No payments due</p>
+                    <!-- <div><a href="#" class="pay">Pay</a></div> -->
+                </div>
+                <div class="pendingItems">
+                    <i class='bx bx-list-check' ></i>
+                    <p>No pending items to approve</p>
+                    <!-- <a href="#" class="approve">Approve</a> -->
+                </div>
+            </div>
             <div class="container"></div>
             <div class="container"></div>  
         </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+        loop: true,
+
+        // pagination: {
+        //     el: '.swiper-pagination',
+        // },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        });
+    </script>
     </body>
 </html>
