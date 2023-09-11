@@ -61,9 +61,13 @@
             </div>
         </section>
         <main class="main">
+            <!-- container:nth-child(1) -->
             <div class="container">
-                <h2 class="pageTitle">Dashboard</h2>
+                <h2>Overview</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, amet.</p>
             </div>
+
+            <!-- container:nth-child(2) -->
             <div class="container">
                 <div class="swiper">
                     <div class="swiper-wrapper">
@@ -80,6 +84,8 @@
                     <div class="swiper-button-next"></div>
                 </div>
             </div>
+
+            <!-- container:nth-child(3) -->
             <div class="container">
                 <img src="image/card-background.svg" alt="savings card">
                 <div class="card-details">
@@ -92,6 +98,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- container:nth-child(4) -->
             <div class="container">
                 <h2>Upcoming payments</h2>
                 <div class="paymentDue">
@@ -105,7 +113,13 @@
                     <!-- <a href="#" class="approve">Approve</a> -->
                 </div>
             </div>
-            <div class="container"></div>
+
+            <!-- container:nth-child(5) -->
+            <div class="container">
+
+            </div>
+
+            <!-- container:nth-child(6) -->
             <div class="container"></div>  
         </main>
 
@@ -123,6 +137,25 @@
             prevEl: '.swiper-button-prev',
         },
         });
+    </script>
+
+    <!-- img carousel autoplay -->
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.swiper-slide');
+
+        function showSlide() {
+            slides.forEach((slide) => (slide.style.display = 'none'));
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlide, 2000); // Change image every 2 seconds
+            }
+
+        showSlide();
+
     </script>
     </body>
 </html>
