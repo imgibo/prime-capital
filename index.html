@@ -2,7 +2,9 @@
 
 <html>
     <head>
-        <TItle>Prime Capital Investment Group</TItle>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gibs Capital</title>
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -44,11 +46,11 @@
                 <i class='bx bxs-arrow-from-right'></i>
             </div>
             <div class="sidebar-btn">                    
-                <a href="#" class="btn dashboard" type="active"><i class='bx bxs-dashboard'></i>Dashboard</a>
-                <a href="#" class="btn portfolio"><i class='bx bx-user-circle'></i>Portfolio</a>
-                <a href="#" class="btn loan"><i class='bx bxs-bank'></i>Loan</a>
-                <a href="#" class="btn transactions"><i class='bx bx-time-five'></i>Transactions</a>
-                <a href="#" class="btn notifications"><i class='bx bx-shopping-bag'></i>Shop</a>
+                <a href="#" class="btn dashboard"><i class='bx bxs-dashboard'></i>Dashboard</a>
+                <a href="portfolio.html" class="btn portfolio"><i class='bx bx-user-circle'></i>Portfolio</a>
+                <a href="loan.html" class="btn loan"><i class='bx bxs-bank'></i>Loan</a>
+                <a href="transactions.html" class="btn transactions"><i class='bx bx-time-five'></i>Transactions</a>
+                <a href="shop.html" class="btn notifications"><i class='bx bx-shopping-bag'></i>Shop</a>
             </div>
             <div class="upsell-container">
                 <h1>Upgrade to Pro 🔥</h1>
@@ -116,6 +118,46 @@
 
             <!-- container:nth-child(5) -->
             <div class="container">
+                <div class="transHeader">
+                    <h2>Transactions</h2>
+                    <p>See Details</p>
+                </div>
+                <div class="transItems">
+                    <div class="itemContainer">
+                        <i class='bx bx-download'></i>
+                        <div>
+                            <p class="transType">Deposit</p>
+                            <p class="from">to Gilbert Burgos</p>
+                        </div>
+                        <div class="itemContainer-right">
+                            <p class="transAmount">PHP 5,000.00</p>
+                            <p class="transDate">September 18, 2023</p>
+                        </div>  
+                    </div>
+                    <div class="itemContainer">
+                        <i class='bx bx-transfer' ></i>
+                        <div>
+                            <p class="transType">Transfer</p>
+                            <p class="from">to BDO</p>
+                        </div>
+                        <div class="itemContainer-right">
+                            <p class="transAmount">PHP 3,000.00</p>
+                            <p class="transDate">September 15, 2023</p>
+                        </div>  
+                    </div>
+                    <div class="itemContainer">
+                        <i class='bx bx-upload'></i>
+                        <div>
+                            <p class="transType">Withdraw</p>
+                            <p class="from">from Savings Account</p>
+                        </div>
+                        <div class="itemContainer-right">
+                            <p class="transAmount">PHP 10,000.00</p>
+                            <p class="transDate">September 16, 2023</p>
+                        </div>  
+                    </div>
+                </div>
+
 
             </div>
 
@@ -123,19 +165,20 @@
             <div class="container"></div>  
         </main>
 
+    <!-- img carousel swipe -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
-        loop: true,
+            loop: true,
 
-        // pagination: {
-        //     el: '.swiper-pagination',
-        // },
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
 
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         });
     </script>
 
@@ -151,7 +194,7 @@
                 slideIndex = 1;
             }
             slides[slideIndex - 1].style.display = 'block';
-            setTimeout(showSlide, 2000); // Change image every 2 seconds
+            setTimeout(showSlide, 3000); // Change image every 3 seconds
             }
 
         showSlide();
