@@ -523,5 +523,6 @@ main {
     background: url(../image/line\ graph.png);
     background-repeat: no-repeat;
     background-position: center;
-    object-fit: cover;
+    background-size: contain;
+    background-color: var(--color-primary);
 }
