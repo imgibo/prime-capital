@@ -148,6 +148,7 @@ section {
     color: var(--color-whitesmoke);
     font-size: var(--font-size-base);
     margin-right: 15px;
+    cursor: pointer;
 }
 
 .sidebar-btn {
@@ -266,6 +267,18 @@ main {
         "col1 col1 col5"
         "col6 col6 col5"
     ;
+}
+
+@media (max-width: 925px) {
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 200px);
+        grid-area: initial;
+    }
+
+    .container:nth-child() {
+        grid-area: initial !important;
+    }
 }
 
 .container {
@@ -507,4 +520,8 @@ main {
 
 .container:nth-child(6) {
     grid-area: col6;
+    background: url(../image/line\ graph.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
 }
