@@ -269,7 +269,7 @@ main {
     ;
 }
 
-@media (max-width: 925px) {
+@media screen and (max-width: 925px) {
     .main {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 200px);
